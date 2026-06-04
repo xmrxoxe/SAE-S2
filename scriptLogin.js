@@ -1,6 +1,6 @@
 function showSignup(){
     document.getElementById('loginForm').classList.remove('active');
-    document.getElementById('signup Form').classList.add('active');
+    document.getElementById('signupForm').classList.add('active');
 }
 
 document.getElementById('loginFormSubmit').addEventListener('submit', function(event){
