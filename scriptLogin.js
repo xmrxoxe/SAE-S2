@@ -25,3 +25,26 @@ function ValidateSignupForm(){
     }
     return true;
 }
+
+document.querySelectorAll('.formControl').forEach(input => {
+    input.addEventListener('focus', function(){
+        this.parentNode.querySelector('i').style.color = '#007BFF';
+        this.classList.add('focused');
+    })
+
+    input.addEventListener('blur', function(){
+        if(!this.value){
+            this.parentNode.querySelector('i').style.color = '#ccc';
+        }
+        this.classList.remove('focused');
+    })
+
+    input.addEventListener('input', function(){
+        if(this.type === 'tel'){
+            const isValidPhone = /^\d{10}$/.test(this.value);
+            this.classList.toggle('success', isValidPhone && this.value.length === 10);
+            this.classList.toggle('error', !isValidPhone && this.value.length > 0);
+        }
+    })
+})
+
