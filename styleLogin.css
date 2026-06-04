@@ -66,6 +66,14 @@ h1 {
     margin-bottom: 24px;
 }
 
+.formGroup ul li {
+    list-style: none;
+    font-family: Calibri Light;
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
 .formControl {
     width: 50%;
     padding: 4px;
