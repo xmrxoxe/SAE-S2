@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleLogin.css">
+    <link rel="shortcut icon" href="Images/logo (1).png" type="image/x-icon">
+    <title>Connexion & Inscription</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <!--Login-->
+                <div class="form-container active" id="login Form">
+                    <h1>Se connecter</h1>
+
+                    <form action="" id="loginFormSubmit">
+                        <div class="formGroup">
+                            <input type="tel" class="formControl" placeholder="Votre numéro de téléphone" required>
+                        </div>
+                        <div class="formGroup">
+                            <input type="password" class="formControl" placeholder="Votre Mot de Passe" required>
+                        </div>
+
+                        <button class="mainButton" type="submit">Se connecter</button>
+                    </form>
+
+                        <div class="loginEmail">
+                            <div class="loginGoogle" onclick="sociallogin('Google')">
+                            <a href="#">Se connecter avec une adresse e-mail</a>
+                        </div>
+
+                        <div class="switchForm">
+                        Vous n'avez pas de compte ? <a href="#" onclick="showSignup()">Inscrivez-vous ici</a>
+                        </div>
+                    </div>
+
+            <!--Sign up-->
+                <div class="form-container active" id="signup Form">
+                    <h1>Inscription</h1>
+
+                    <form action="" id="signupFormSubmit">
+                        <div class="formGroup">
+                            <input type="text" class="formControl" placeholder="Pseudo *" required>
+                        </div>
+                        <div class="formGroup">
+                            <input type="tel" class="formControl" placeholder="Votre numéro de téléphone *" required>
+                        </div>
+                        <div class="formGroup">
+                            <input type="password" class="formControl" placeholder="Votre Mot de Passe *" required>
+                            <ul>
+                                <li>Au moins 8 caractères</li>
+                                <li>Au moins une lettre majuscule</li>
+                                <li>Au moins une lettre minuscule</li>
+                                <li>Au moins un chiffre</li>
+                                <li>Au moins un caractère spécial (!@#$%^&*)</li>
+                            </ul>
+                        </div>
+                        <div class="formGroup">
+                            <input type="password" class="formControl" placeholder="Confirmez votre Mot de Passe *" required>
+                        </div>
+
+                        <button class="mainButton" type="submit">S'inscrire</button>
+                    </form>
+
+                        <div class="loginEmail">
+                            <div class="loginGoogle" onclick="sociallogin('Google')">
+                            Utiliser une adresse e-mail pour s'inscrire
+                        </div>
+
+                        <div class="switchForm">
+                        Vous avez déjà un compte ? <a href="#" onclick="showLogin()">Connectez-vous ici</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="scriptLogin.js"></script>
+</body>
+</html>
