@@ -3,6 +3,11 @@ function showSignup(){
     document.getElementById('signupForm').classList.add('active');
 }
 
+function showLogin(){
+    document.getElementById('signupForm').classList.remove('active');
+    document.getElementById('loginForm').classList.add('active');
+}
+
 document.getElementById('loginFormSubmit').addEventListener('submit', function(event){
     event.preventDefault();
 });
