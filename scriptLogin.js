@@ -16,6 +16,40 @@ document.getElementById('signupFormSubmit').addEventListener('submit', function(
     event.preventDefault();
 });
 
+const loginEmailToggle = document.getElementById('loginEmail');
+if (loginEmailToggle) {
+    loginEmailToggle.addEventListener('click', function(event) {
+        const phoneInput = document.querySelector('#loginForm input[type="tel"]');
+        if (phoneInput) {
+            phoneInput.type = 'email';
+            phoneInput.placeholder = 'Votre adresse e-mail';
+            phoneInput.value = '';
+        }
+        const googleLink = this.querySelector('.loginGoogle');
+        if (googleLink) {
+            googleLink.remove();
+        }
+        event.preventDefault();
+    });
+}
+
+const signupEmailToggle = document.getElementById('signupEmail');
+if (signupEmailToggle) {
+    signupEmailToggle.addEventListener('click', function(event) {
+        const phoneInput = document.querySelector('#signupForm input[type="tel"]');
+        if (phoneInput) {
+            phoneInput.type = 'email';
+            phoneInput.placeholder = 'Votre adresse e-mail *';
+            phoneInput.value = '';
+        }
+        const googleLink = this.querySelector('.loginGoogle');
+        if (googleLink) {
+            googleLink.remove();
+        }
+        event.preventDefault();
+    });
+}
+
 function ValidateSignupForm(){
     const password = document.querySelector ('#signupForm input[type="password"]').value;
     const confirmPassword = document.querySelector('#signupForm input[type="password"]:last-of-type').value;
