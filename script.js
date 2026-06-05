@@ -13,3 +13,10 @@ for(option of options) {
         searchInput.placeholder = `Rechercher dans ${this.innerText.toLowerCase()}...`;
     }
 }
+
+const loginButton = document.getElementById('login');
+if (loginButton) {
+    loginButton.addEventListener('click', function() {
+        window.location.href = 'indexLogin.html';
+    });
+}
