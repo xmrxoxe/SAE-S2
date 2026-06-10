@@ -20,3 +20,10 @@ let profileshowingHeader = document.getElementById('profileshowingHeader');
 dropdownHeader.onclick = function() {
     profileshowingHeader.classList.toggle('open');
 }
+
+const profileDeconnect = document.getElementById('disconnectLink');
+if (profileDeconnect) {
+    profileDeconnect.addEventListener('click', function() {
+        window.location.href = 'indexHeader.html';
+    });
+}
