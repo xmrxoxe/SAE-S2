@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php 
+session_start();
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +15,15 @@
             <div id="hautform">
                 <h3>Formulaire de contact</h3>
             </div>
+
+            <?php
+            if(array_key_exists('errors', $_SESSION)): 
+            ?>
+
+            <div class="alert alert-danger">
+                <?= implode('<br>', $_SESSION['errors']); ?>
+            </div>
+            <?php endif; ?>
             <form action="traitement.php" method="POST" >
                 <div id="contactform">
                     <div id="infoform">
